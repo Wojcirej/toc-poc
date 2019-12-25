@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Table of contents POC</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" rel="stylesheet" />
+  <style>
+  </style>
+  <script>
+  </script>
+</head>
+<body>
+  <% for (entity of entities) { %>
+    <%- include('entity.html.ejs', entity.forRender()) %>
+  <% } %>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<section class="entity" id="<%= id %>">
+  <header class="<%= titleClass %>">
+    <h2><%= title %></h2>
+  </header>
+  <main class="entity__description">
+    <p><%= description %></p>
+  </main>
+  <img src="<%= imageUrl %>" />
+</section>
+<% if (hasChildren) { %>
+  <% for (child of children) { %>
+    <%- include('entity.html.ejs', child.forRender()) %>
+  <% } %>
+<% } %>

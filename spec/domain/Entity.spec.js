@@ -8,9 +8,12 @@ describe("Entity", () => {
   describe("forRender", () => {
     it("returns object with all keys necessary for HTML template rendering", () => {
       expect(Object.keys(entity.forRender())).toEqual([
+        "id",
         "title",
+        "titleClass",
         "description",
         "imageUrl",
+        "hasChildren",
         "children"
       ]);
     });
