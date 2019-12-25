@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "setup:dev": "export NODE_ENV=development && node infrastructure/hosting/setup.js",
+    "setup:staging": "export NODE_ENV=staging && node infrastructure/hosting/setup.js",
+    "setup:production": "export NODE_ENV=production && node infrastructure/hosting/setup.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,7 @@
   },
   "homepage": "https://github.com/Wojcirej/toc-poc#readme",
   "dependencies": {
+    "aws-sdk": "^2.596.0",
     "ejs": "^3.0.1"
   },
   "devDependencies": {
