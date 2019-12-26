@@ -1,0 +1,51 @@
+.entity {
+  border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	width: 100%;
+	border-spacing: 0;
+	page-break-inside: avoid;
+	max-height: 100%;
+	margin-bottom: 20px;
+}
+
+.entity__content {
+  display: flex;
+	flex-direction: row;
+}
+
+.entity header {
+  vertical-align: top;
+	color: #343634;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.entity__description {
+  order: 1;
+	width: calc(100% - 224px);
+}
+
+.entity__image {
+  order: 2;
+	vertical-align: top;
+	position: relative;
+	width: 224px;
+	overflow: hidden;
+}
+
+.entity__image-container {
+  position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+}
+
+.entity__image img {
+  position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

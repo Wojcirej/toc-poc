@@ -16,13 +16,19 @@ class Entity {
     return `entity__title-level${this.level}`;
   }
 
+  imageUrl() {
+    return this.image
+      ? this.image
+      : "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D";
+  }
+
   forRender() {
     return {
       id: this.id,
       title: this.title,
       titleClass: this.titleClass(),
       description: this.description,
-      imageUrl: this.image,
+      imageUrl: this.imageUrl(),
       hasChildren: this.hasChildren(),
       children: this.children
     };

@@ -2,10 +2,16 @@
   <header class="<%= titleClass %>">
     <h2><%= title %></h2>
   </header>
-  <main class="entity__description">
-    <p><%= description %></p>
-  </main>
-  <img src="<%= imageUrl %>" />
+  <div class="entity__content">
+    <main class="entity__description">
+      <p><%= description %></p>
+    </main>
+    <aside class="entity__image">
+      <div class="entity__image-container">
+        <img src="<%= imageUrl %>" alt="" />
+      </div>
+    </aside>
+  </div>
 </section>
 <% if (hasChildren) { %>
   <% for (child of children) { %>
