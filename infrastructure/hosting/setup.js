@@ -6,8 +6,8 @@ const { setupBucket } = require("./setupBucket");
 const { setupWebsiteConfig } = require("./setupWebsiteConfig");
 const { setupStaticPages } = require("./setupStaticPages");
 
-const setup = async bucketName => {
-  await setupBucket(bucketName, s3Adapter);
+const setup = async (bucketName, awsRegion) => {
+  await setupBucket(bucketName, awsRegion, s3Adapter);
   await setupWebsiteConfig(bucketName, s3Adapter);
   await setupStaticPages(bucketName, "index.html", "error.html", s3Adapter);
   console.log(
@@ -15,4 +15,4 @@ const setup = async bucketName => {
   );
 };
 
-setup(s3BucketName);
+setup(s3BucketName, awsRegion);

@@ -6,8 +6,9 @@
   "scripts": {
     "test": "export NODE_ENV=test && jasmine",
     "setup:dev": "export NODE_ENV=development && node infrastructure/hosting/setup.js",
-    "setup:staging": "export NODE_ENV=staging && node infrastructure/hosting/setup.js",
-    "setup:production": "export NODE_ENV=production && node infrastructure/hosting/setup.js"
+    "setup:production": "export NODE_ENV=production && node infrastructure/hosting/setup.js",
+    "deploy:dev": "export NODE_ENV=development && node app/services/generateWebpage.js",
+    "deploy:prod": "export NODE_ENV=production && node app/services/generateWebpage.js"
   },
   "repository": {
     "type": "git",
