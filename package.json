@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine",
+    "test": "export NODE_ENV=test && jasmine",
     "setup:dev": "export NODE_ENV=development && node infrastructure/hosting/setup.js",
     "setup:staging": "export NODE_ENV=staging && node infrastructure/hosting/setup.js",
     "setup:production": "export NODE_ENV=production && node infrastructure/hosting/setup.js"
