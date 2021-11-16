@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Wojcirej/toc-poc#readme",
   "dependencies": {
-    "aws-sdk": "^2.596.0",
+    "aws-sdk": "^2.814.0",
     "ejs": "^3.0.1"
   },
   "devDependencies": {
